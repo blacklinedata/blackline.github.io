@@ -6,8 +6,7 @@ on:
       - main
 
 jobs:
-  test-deploy:
-    name: Test deployment
+  build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,3 +23,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Test build website
         run: yarn build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./getblackline/build

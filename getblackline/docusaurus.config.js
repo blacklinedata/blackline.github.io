@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Blackline",
   tagline: "Data are cool, PII is not",
-  url: "https://www.getblackline.com",
-  baseUrl: "/",
+  url: "https://blacklinedata.github.io",
+  baseUrl: "/blackline.github.io/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",

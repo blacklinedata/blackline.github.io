@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     defaults:
@@ -28,8 +27,6 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./getblackline/build
-
-  # Deploy job
   deploy:
     # Add a dependency to the build job
     needs: build
