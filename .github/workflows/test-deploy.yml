@@ -15,8 +15,6 @@ jobs:
         working-directory: ./getblackline
     steps:
       - uses: actions/checkout@v3
-      - run: ls
-      - run: pwd
       - uses: actions/setup-node@v3
         with:
           node-version: 18
