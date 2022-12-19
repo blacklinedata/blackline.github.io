@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  dev:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src
+    command: ["yarn", "dev"]
+    working_dir: /src/getblackline
