@@ -1,11 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
+  # push:
+  pull_request:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
   deploy:
@@ -26,9 +25,6 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build website
         run: yarn build
-
-      # Popular action to deploy to GitHub Pages:
-      # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
