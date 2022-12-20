@@ -1,0 +1,1 @@
+# Community Adapters Foo

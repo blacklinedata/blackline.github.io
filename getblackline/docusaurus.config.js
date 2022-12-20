@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Blackline",
-  tagline: "Data are cool, PII is not",
+  tagline: "Simplify PII management and GDPR compliance with Blackline.",
   url: "https://blacklinedata.github.io",
   baseUrl: "/blackline.github.io/",
   onBrokenLinks: "throw",
@@ -59,7 +59,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "Blackline",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
@@ -67,13 +67,19 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "docs/README",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            type: "doc",
+            docId: "tutorial/intro",
+            position: "left",
+            label: "Tutorial",
+          },
+          {
+            href: "https://github.com/blacklinedata/blackline-core",
             label: "GitHub",
             position: "right",
           },
@@ -87,7 +93,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/intro",
+                to: "/docs/tutorial/intro",
               },
             ],
           },
@@ -117,12 +123,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/blacklinedata/blackline.github.io",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Blackline. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
